@@ -564,7 +564,9 @@ if page == "Dashboard":
 
         trend["assessed_at"] = pd.to_datetime(
             trend["assessed_at"],
+            format="mixed",
             errors="coerce",
+            utc=True,
         )
 
         trend["Date"] = (
